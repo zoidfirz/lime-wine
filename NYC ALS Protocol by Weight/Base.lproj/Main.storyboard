@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="NYC_ALS_Protocol_by_Weight" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,79 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Weight in Lb's" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="59Y-ne-NyO">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJd-Mf-XVv">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Simple View">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgt-X7-SuM">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Protocol View">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="59Y-ne-NyO" secondAttribute="centerX" id="1gN-dn-Aot"/>
+                            <constraint firstAttribute="centerX" secondItem="kJd-Mf-XVv" secondAttribute="centerX" id="9AY-U7-vaQ"/>
+                            <constraint firstAttribute="centerY" secondItem="kJd-Mf-XVv" secondAttribute="centerY" id="Uyn-IU-p2c">
+                                <variation key="widthClass=compact" constant="55"/>
+                            </constraint>
+                            <constraint firstAttribute="centerY" secondItem="Mgt-X7-SuM" secondAttribute="centerY" id="cFa-ZK-fdl">
+                                <variation key="widthClass=compact" constant="-52"/>
+                            </constraint>
+                            <constraint firstAttribute="centerY" secondItem="59Y-ne-NyO" secondAttribute="centerY" id="hV6-R3-e18">
+                                <variation key="widthClass=compact" constant="174"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="Mgt-X7-SuM" secondAttribute="centerX" id="ucM-YF-5II"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="59Y-ne-NyO"/>
+                                <exclude reference="kJd-Mf-XVv"/>
+                                <exclude reference="Mgt-X7-SuM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1gN-dn-Aot"/>
+                                <exclude reference="hV6-R3-e18"/>
+                                <exclude reference="9AY-U7-vaQ"/>
+                                <exclude reference="Uyn-IU-p2c"/>
+                                <exclude reference="cFa-ZK-fdl"/>
+                                <exclude reference="ucM-YF-5II"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="59Y-ne-NyO"/>
+                                <include reference="kJd-Mf-XVv"/>
+                                <include reference="Mgt-X7-SuM"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1gN-dn-Aot"/>
+                                <include reference="hV6-R3-e18"/>
+                                <include reference="9AY-U7-vaQ"/>
+                                <include reference="Uyn-IU-p2c"/>
+                                <include reference="cFa-ZK-fdl"/>
+                                <include reference="ucM-YF-5II"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="enterWeightTextField" destination="59Y-ne-NyO" id="jUd-XP-E5h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138" y="136"/>
         </scene>
     </scenes>
 </document>
